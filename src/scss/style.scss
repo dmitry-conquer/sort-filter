@@ -1,0 +1,18 @@
+@import '../../node_modules/nouislider/dist/nouislider.min';
+ 
+/* Config files */
+@import 
+'./config/functions', 
+'./config/variables', 
+'./config/mixins';
+
+/* Grobal styles */
+@import 
+'./common/normalize', 
+'./common/global';
+
+/* Templates style */
+/* Pages */
+@import
+'index-page';
+

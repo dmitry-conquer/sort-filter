@@ -1,0 +1,20 @@
+/* === Число от числа в процентах === */
+@function percent($pxOne, $pxTwo) {
+  @return calc((100% * $pxOne) / $pxTwo);
+}
+
+/* === px -> rem === */
+@function rem($px) {
+  @return calc($px / 10 * 1rem);
+}
+
+/* === Значение в зависимости от размера шрифта текущего элемента === */
+@function em($px, $cur-fz) {
+  @return calc($px / $cur-fz * 1em);
+}
+
+/* === line height === */
+@function lh($lh, $fz) {
+  @return calc($lh / $fz);
+}
+

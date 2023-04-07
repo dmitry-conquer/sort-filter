@@ -1,0 +1,13 @@
+//* === Container стили
+$container-layout-width: 1472; // Ширина контейнера по макету
+$container-padding: 15; // Отступы у контейнера (по 15px слева и справа, 0 = нет отступа)
+
+$container-max-width: calc($container-layout-width + ($container-padding * 2)); // Ширина контейнера + padding (0 = нет ограничения)
+
+
+//* === Break-points
+$xl: 1199.98px;
+$lg: 991.98px;
+$md: 767.98px;
+$sm: 575.98px;
+

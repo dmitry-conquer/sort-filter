@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('templates/head.html', { 'title': 'Сортування товарів' })
+<body>
+   <div class="wrapper">
+      <main>
+         <section class="products">
+            <div class="products__container">
+               <aside class="products__siderbar filter">
+                  <h1 class="filter__title">Шукаєш щось особливе?</h1>
+                  <div class="filter__subject">
+                     <h2 class="filter__category-title">Тематика</h2>
+                     <ul class="filter__list">
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="girls" checked>
+                           <label for="girls">Для дівчат</label>
+                        </li>
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="men" checked>
+                           <label for="men">Для чоловіків</label>
+                        </li>
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="patriotic">
+                           <label for="patriotic">Патріотичні</label>
+                        </li>
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="wedding">
+                           <label for="wedding">Весільні</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="filter__features">
+                     <h2 class="filter__category-title">Особливості</h2>
+                     <ul class="filter__list">
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="classical" checked>
+                           <label for="classical">Класичні рецепти</label>
+                        </li>
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="gluten-free">
+                           <label for="gluten-free">Без глютену</label>
+                        </li>
+                        <li class="filter__item">
+                           <input type="checkbox" class="visually-hidden" id="flowers">
+                           <label for="flowers">З квітами</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="filter__price">
+                     <div class="filter__range" id="range-slider"></div>
+                     <div class="filter__inputs">
+                        <div class="filter__input filter__input_from">
+                           <label for="min-price" class="visually-hidden"></label>
+                           <input type="text" id="min-price" placeholder="500">
+                        </div>
+                        <div class="filter__input filter__input_to">
+                           <label for="max-price" class="visually-hidden"></label>
+                           <input type="text" id="max-price" placeholder="3500">
+                        </div>
+                     </div>
+                     <button class="filter__enter-price" type="button">Фільтрувати</button>
+                  </div>
+               </aside>
+               <div class="products__body">
+                  <div class="products__type type-products">
+                     <button type="button" class="products__open-filter">Відкрити фільтр</button>
+                     <ul class="type-products__list">
+                        <li class="type-products__item">
+                           <input class="visually-hidden" type="radio" id="all" name="type" value="all" checked>
+                           <label for="all">Всі</label>
+                        </li>
+                        <li class="type-products__item">
+                           <input class="visually-hidden" type="radio" id="cake" name="type" value="cakes">
+                           <label for="cake">Торти</label>
+                        </li>
+                        <li class="type-products__item">
+                           <input class="visually-hidden" type="radio" id="cup-cake" name="type" value="cup-cakes">
+                           <label for="cup-cake">Кап-кейки</label>
+                        </li>
+                     </ul>
+                     <div class="products__sort-price">
+                        <button type="button">Сортувати по ціні</button>
+                     </div>
+                  </div>
+                  <div class="products__items">
+                     <article class="products__item item-products" data-type="cake" data-subject="wedding" data-features="classical">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/1.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>2300</span> грн
+                           </div>
+                           <h3 class="item-products__name">Весільний триярусний торт з фруктами та квітами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="girls" data-features="flowers">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/2.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>3100</span> грн
+                           </div>
+                           <h3 class="item-products__name">Бісквітний торт з ягодами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-subject="men" data-features="classical">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/1.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>820</span> грн
+                           </div>
+                           <h3 class="item-products__name">Чорні капкейки з шоколадом та печивом</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="girls" data-features="patriotic">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/3.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>2500</span> грн
+                           </div>
+                           <h3 class="item-products__name">Ванільно-карамельний торт з печивом Орео</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-subject="girls" data-features="gluten-free">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/2.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>1110</span> грн
+                           </div>
+                           <h3 class="item-products__name">Капкейки з карамеллю 3 шт</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-features="classical">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/3.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>620</span> грн
+                           </div>
+                           <h3 class="item-products__name">Капкейки з ніжним кремом</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="girls">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/4.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>4200</span> грн
+                           </div>
+                           <h3 class="item-products__name">Торт рожевий з макарунами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-features="classical">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/4.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>800</span> грн
+                           </div>
+                           <h3 class="item-products__name">Оригінальні капкейки з кремом та печивом</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-features="flowers">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/5.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>420</span> грн
+                           </div>
+                           <h3 class="item-products__name">Пасхальні капкейки шоколадні та ванільні </h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="wedding" data-features="flowers">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/5.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>4100</span> грн
+                           </div>
+                           <h3 class="item-products__name">Торт “Літнє бажання” з шоколадом та макарунами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="wedding" data-features="gluten-free">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/6.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>3320</span> грн
+                           </div>
+                           <h3 class="item-products__name">Весільний триярусний торт з фруктами та квітами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-subject="girls" data-features="gluten-free">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/7.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>2100</span> грн
+                           </div>
+                           <h3 class="item-products__name">Бісквітний торт з ягодами</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cup-cake" data-subject="men">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cup-cakes/6.jpg" alt="cup-cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>450</span> грн
+                           </div>
+                           <h3 class="item-products__name">Чорні капкейки з шоколадом та печивом</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                     <article class="products__item item-products" data-type="cake" data-type="cake" data-features="classical">
+                        <div class="item-products__image _imw">
+                           <img src="./img/cakes/8.jpg" alt="cake">
+                        </div>
+                        <div class="item-products__content">
+                           <div class="item-products__price">
+                              <span>2900</span> грн
+                           </div>
+                           <h3 class="item-products__name">Ванільно-карамельний торт з печивом Орео</h3>
+                           <p class="item-products__desription">4 варіанти начинок</p>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+   </div>
+   <script type="module" src="./js/app.min.js"></script>
+</body>
+
+</html>
